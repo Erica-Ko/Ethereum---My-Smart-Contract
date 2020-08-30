@@ -20,7 +20,7 @@ contract restaurantBills {
         invoiceNumber = newInvoiceNumber;
     }
     
-    function getCarInvoice () public view returns (string, int, string, string, string, string, string) {
+    function getRestaurantBills () public view returns (string, int, string, string, string, string, string) {
         return(customerName, amountOfBill, dishes, restaurantName, Date, customerAddrs, invoiceNumber);
     }
 }
