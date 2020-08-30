@@ -23,4 +23,15 @@ contract restaurantBills {
     function getRestaurantBills () public view returns (string, int, string, string, string, string, string) {
         return(customerName, amountOfBill, dishes, restaurantName, Date, customerAddrs, invoiceNumber);
     }
+    
+    function setRestaurantBills (string newCustomerName, int newAmountOfBill, string newDishes, string newRestaurantName, 
+    string newDate, string newCustomerAddrs, string newInvoiceNumber) public {
+        customerName = newCustomerName;
+        amountOfBill = newAmountOfBill;
+        dishes = newDishes;
+        restaurantName = newRestaurantName;
+        Date = newDate;
+        customerAddrs = newCustomerAddrs;
+        invoiceNumber = newInvoiceNumber;
+    }
 }
