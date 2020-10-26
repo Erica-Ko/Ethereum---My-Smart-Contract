@@ -15,13 +15,14 @@ The user can use “Throw” keyword to cause an error if required.
 It does not return any Ether spent but rollbacks changes to the data alone
 
 Disadvantages
-All gas is consumed, everything reverted
+All gas is consumed, everything reverted (Gas limit * Gas Price)
 Impossible to tell users why the call failed
 Errors cannot be caught, so they cannot be handled gracefully
 
 2. Require
 
 Check pre-requisited condition and throw an exception if the condition is not satisfied
+Can return the remaining gas for that call
 Used to ensure valid conditions that cannot be detected until execution time
 This includes conditions on inputs or return values from calls to external contracts.
 When a require condition fails, solidity internally performs a “revert” operation
